@@ -23,7 +23,7 @@ export default function BestSeller(){
               {
                 bestSeller.map((item,index)=>(
                     <ProductItem key={index} id={item._id} name={item.name} price={item.price} image={item.image}  />
-                ))
+                )) 
               }
             </div>
         </div>

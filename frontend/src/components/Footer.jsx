@@ -31,7 +31,7 @@ export default function Footer(){
                 <hr />
                 <p className="py-5 text-sm text-center">
                   Copyright 2024@ forever.com - All Right Reserved.
-                </p>
+                </p> 
             </div>
         </div>
     )

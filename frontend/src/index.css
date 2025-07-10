@@ -17,6 +17,15 @@ a.active hr{
   font-style: normal;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: darkgray;
+  border-radius: 10px;
+}
+
 @media (max-width: 640px) {
   a.active{
     background-color: black;
