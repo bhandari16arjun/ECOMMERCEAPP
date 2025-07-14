@@ -10,8 +10,9 @@ export default function Cart(){
     const [cartData,setCartData]=React.useState([]);
 
     useEffect(()=>{
-       const tempData=[];
-       for(const items in cartItems){
+        if(products.length>0){
+          const tempData=[];
+          for(const items in cartItems){
            for(const item in cartItems[items]){
             if(cartItems[items][item]>0){
                 tempData.push({
@@ -23,7 +24,11 @@ export default function Cart(){
            }
            setCartData(tempData);
        }
-    },[cartItems])
+
+
+     }
+       
+    },[cartItems,products])
     return(
        <div className='border-t pt-14'>
           <div className='text-2xl mb-3'>

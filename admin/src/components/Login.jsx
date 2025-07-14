@@ -1,8 +1,9 @@
 import axios from "axios";
 import {useState} from "react";
-import { backendUrl } from "../App";
 
-export default function Login({setToken}){
+import {toast} from "react-toastify";
+
+export default function Login({setToken,backendUrl}){
     
     const [email,setEmail]=useState('');
     const [password,setPassword]=useState('');
@@ -11,13 +12,13 @@ export default function Login({setToken}){
                 e.preventDefault();
                 const response=await axios.post(backendUrl+'/api/user/admin',{email,password});
                 if(response.data.success){
-                    setToken(response.data.token)
+                    setToken(response.data.token);
                 }else{
                     toast.error(response.data.message);
                 }
            } catch(error){
                console.log(error);
-               toast.error(error.message)
+               toast.error(error.message);
            }
     }
 
@@ -34,7 +35,7 @@ export default function Login({setToken}){
                         <p className="text-sm font-medium text-gray-700 mb-2">Password</p>
                         <input onChange={(e)=>setPassword(e.target.value)} value={password} className="rounded-md px-3 py-2 w-full border border-gray-300 outline-none" type="password" placeholder="Enter your Password" required />
                     </div>
-                    <button className="mt-2 w-full py-2 px-4 rounded-md text-white bg-black" type="submit">Login</button>
+                    <button className="mt-2 w-full py-2 px-4 rounded-md text-white bg-black cursor-pointer" type="submit">Login</button>
                 </form>
             </div>
         </div>
