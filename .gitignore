@@ -1,0 +1,42 @@
+# Dependencies
+# --------------------
+# This is the most important one!
+/node_modules
+/bower_components
+
+# Secrets & Environment Variables
+# --------------------
+# Never commit this file! Contains passwords, API keys, etc.
+.env
+.env.local
+.env.*.local
+! .env.example
+
+# Build & Production files
+# --------------------
+/build
+/dist
+/.next/
+/.nuxt/
+/out/
+
+# Log files
+# --------------------
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.log
+
+# IDE & Editor config
+# --------------------
+.vscode/*
+!.vscode/extensions.json
+.idea
+*.sublime-*
+*.suo
+*.user
+
+# Operating System files
+# --------------------
+.DS_Store
+Thumbs.db

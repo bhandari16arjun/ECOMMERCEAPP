@@ -1,0 +1,11 @@
+# Node.js backend specifics
+
+# Dependencies folder
+node_modules/
+
+# Production build folder
+dist/
+build/
+
+# dotenv file specifically for the backend, if not covered globally
+.env
